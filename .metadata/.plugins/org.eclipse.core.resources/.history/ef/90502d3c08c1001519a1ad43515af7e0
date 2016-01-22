@@ -91,7 +91,7 @@ public class Gym extends JFrame {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"1", "Ivar Drago"},
+				{null, null},
 				{null, null},
 				{null, null},
 				{null, null},

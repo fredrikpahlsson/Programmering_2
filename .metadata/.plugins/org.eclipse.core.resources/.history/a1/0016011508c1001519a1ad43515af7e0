@@ -15,8 +15,6 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.ImageIcon;
-import java.awt.Color;
-import javax.swing.JMenuItem;
 
 public class Gym extends JFrame {
 	private JTable table;
@@ -24,7 +22,7 @@ public class Gym extends JFrame {
 	private JTextField textField_1;
 	private JTextField txtIrkutsk;
 	private JTextField textField_3;
-	private JTextField txtDraggazhotmailcom;
+	private JTextField textField_4;
 	private JTextField textField_5;
 	private JTextField txtIvarDrago;
 	private JTextField textField_7;
@@ -49,7 +47,6 @@ public class Gym extends JFrame {
 	 * Create the frame.
 	 */
 	public Gym() {
-		getContentPane().setForeground(Color.GRAY);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 550, 400);
 		
@@ -59,29 +56,11 @@ public class Gym extends JFrame {
 		JMenu mnArkiv = new JMenu("Arkiv");
 		menuBar.add(mnArkiv);
 		
-		JMenuItem mntmSkrivUt = new JMenuItem("Skriv ut");
-		mnArkiv.add(mntmSkrivUt);
-		
-		JMenuItem mntmAvsluta = new JMenuItem("Avsluta :(");
-		mnArkiv.add(mntmAvsluta);
-		
 		JMenu mnMedlem = new JMenu("Medlem");
 		menuBar.add(mnMedlem);
 		
-		JMenuItem mntmNyMedlem = new JMenuItem("Ny medlem");
-		mnMedlem.add(mntmNyMedlem);
-		
-		JMenuItem mntmSkMedlem = new JMenuItem("S\u00F6k medlem");
-		mnMedlem.add(mntmSkMedlem);
-		
 		JMenu mnHjlp = new JMenu("Hj\u00E4lp");
 		menuBar.add(mnHjlp);
-		
-		JMenuItem mntmMerHjlp = new JMenuItem("Mer Hj\u00E4lp...");
-		mnHjlp.add(mntmMerHjlp);
-		
-		JMenuItem mntmOmProgrammet = new JMenuItem("Om Programmet");
-		mnHjlp.add(mntmOmProgrammet);
 		getContentPane().setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
@@ -91,7 +70,7 @@ public class Gym extends JFrame {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
-				{"1", "Ivar Drago"},
+				{null, null},
 				{null, null},
 				{null, null},
 				{null, null},
@@ -176,16 +155,14 @@ public class Gym extends JFrame {
 		txtIrkutsk.setColumns(10);
 		
 		textField_3 = new JTextField();
-		textField_3.setText("+7 234 9809 3280 13445");
 		textField_3.setBounds(277, 202, 162, 20);
 		getContentPane().add(textField_3);
 		textField_3.setColumns(10);
 		
-		txtDraggazhotmailcom = new JTextField();
-		txtDraggazhotmailcom.setText("draggaz73@ussr.com");
-		txtDraggazhotmailcom.setBounds(277, 227, 162, 20);
-		getContentPane().add(txtDraggazhotmailcom);
-		txtDraggazhotmailcom.setColumns(10);
+		textField_4 = new JTextField();
+		textField_4.setBounds(277, 227, 162, 20);
+		getContentPane().add(textField_4);
+		textField_4.setColumns(10);
 		
 		JButton btnSpara = new JButton("Spara");
 		btnSpara.setBounds(324, 290, 89, 23);
