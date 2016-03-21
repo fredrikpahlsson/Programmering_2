@@ -1,0 +1,43 @@
+ 
+import java.util.ArrayList;
+
+public class TestBike {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList<Bike> blist = new ArrayList<Bike>();{
+		
+		
+		Bike num0 = new Bike("Sköngrön", 1249,21);
+		Bike num1 = new Bike("Äggskalsvit", 3899,28);
+		Bike num2 = new Bike("Limegrön", 2499,21);
+		Bike num3 = new Bike("Brandgul", 2299,21);
+		Bike num4 = new Bike("Havsblå", 4699,28);
+		Bike num5 = new Bike("Himelsblå", 1999,21);
+		Bike num6 = new Bike("Åskgrå", 5999,26);
+		Bike num7 = new Bike("Vinröd", 6799, 26);
+		Bike num8 = new Bike("Vanligblå", 2999,28);
+		Bike num9 = new Bike("Mossgrön", 2999,28);
+		Bike num10 = new Bike("Snövit", 2999,28);
+		
+		blist.add(num0);
+		blist.add(num1);
+		blist.add(num2);
+		blist.add(num3);
+		blist.add(num4);
+		blist.add(num5);
+		blist.add(num6);
+		blist.add(num7);
+		blist.add(num8);
+		blist.add(num9);
+		blist.add(num10);
+
+		
+		for(Bike b:blist){
+	    System.out.println ("Cyklen har färgen" + Bike.getColor() + "och kostar " + Bike.getPrice() + "riksdaler och har en hjulstorlek på " +  Bike.getSize() + "tum");
+		}
+
+	}
+	}
+}

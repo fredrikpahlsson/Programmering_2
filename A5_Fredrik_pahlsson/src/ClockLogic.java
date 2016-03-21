@@ -1,0 +1,91 @@
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.text.DecimalFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+
+
+
+public class ClockLogic  {
+    public boolean alarmSet;
+	 public static int alarmHour;
+	    public static int alarmMinute;
+	    public boolean alarmOn;
+	    
+    private DigitalClockGUI clockGUI;
+   
+    
+    public ClockLogic (DigitalClockGUI DigitalClockGUI){
+    this.clockGUI = DigitalClockGUI;
+    new ClockThread().start();
+    
+   
+    
+    }
+    
+    public void setAlarm(int hours, int minute){
+          alarmHour = hours;
+          alarmMinute = minute;
+          System.out.println("Set to" + alarmHour + " " +alarmMinute);
+          alarmSet = true;
+          
+          
+      }
+      
+      public void clearAlarm(){   
+          this.alarmHour = -1;
+          this.alarmMinute = -1;
+          System.out.println("Clear");    
+      }
+      public void checkAlarmTime(int hour, int minute){
+    	  System.out.println("alarm set to h" +alarmHour +"m" +alarmMinute);
+    	     	  if(alarmMinute == minute && alarmHour == hour){
+    		System.out.println("Alarm!");
+    		alarmOn = true;
+    		
+    	  }
+      }
+    
+   
+    
+    
+
+
+        public class ClockThread extends Thread {
+        	
+        
+        public void run() {
+            DecimalFormat timeFormat = new DecimalFormat("00");
+            while(true) {
+                
+                try {
+                    Thread.sleep(1000);
+                    } catch (InterruptedException e) {} 
+                //System.out.println("Starting");
+                Calendar cal = Calendar.getInstance();
+                
+                
+                int second = cal.get(Calendar.SECOND);
+                int minute = cal.get(Calendar.MINUTE);
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                clockGUI.setTimeOnLabel(timeFormat.format(hour)+":"+timeFormat.format(minute)+":"+timeFormat.format(second)); 
+                if(clockGUI.isAlarmSet()){
+                	System.out.println("waiting for alarm");
+                	clockGUI.checkAlarm(hour, minute);
+                }
+                
+               
+                }
+     }
+            
+            
+        }
+     
+        }
+        
+
+
+

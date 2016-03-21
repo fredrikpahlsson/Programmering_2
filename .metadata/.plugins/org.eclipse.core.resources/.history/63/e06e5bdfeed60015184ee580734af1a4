@@ -1,0 +1,108 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import java.awt.Font;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class DigitalClockGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JLabel lblKlocka;
+    private ClockLogic clockLogic;
+    private JTextField textField;
+    private JTextField textField_1;
+	
+	
+	
+ public void setTimeOnLabel(String time){ 
+     lblKlocka.setText(time); 
+     
+ }
+ 
+ public void activateAlarm(boolean activate){   
+ activate = false;
+
+ }
+	
+	
+	
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					DigitalClockGUI frame = new DigitalClockGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public DigitalClockGUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		lblKlocka = new JLabel("Klocka");
+		lblKlocka.setFont(new Font("Viner Hand ITC", Font.PLAIN, 50));
+		lblKlocka.setBounds(73, 58, 258, 60);
+		contentPane.add(lblKlocka);
+		
+		JButton btnSetAlarm = new JButton("Set Alarm ");
+		btnSetAlarm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnSetAlarm.setBounds(242, 154, 121, 23);
+		contentPane.add(btnSetAlarm);
+		
+		JButton btnClearAlarm = new JButton("Clear Alarm");
+		btnClearAlarm.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnClearAlarm.setBounds(242, 186, 121, 23);
+		contentPane.add(btnClearAlarm);
+		
+		textField = new JTextField();
+		textField.setBounds(116, 155, 86, 20);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		textField_1 = new JTextField();
+		textField_1.setBounds(116, 187, 86, 20);
+		contentPane.add(textField_1);
+		textField_1.setColumns(10);
+		
+		JLabel lblHour = new JLabel("Hour");
+		lblHour.setBounds(60, 158, 46, 14);
+		contentPane.add(lblHour);
+		
+		JLabel lblMinute = new JLabel("Minute");
+		lblMinute.setBounds(60, 190, 46, 14);
+		contentPane.add(lblMinute);
+		clockLogic = new ClockLogic(this);
+	}
+}
+
+

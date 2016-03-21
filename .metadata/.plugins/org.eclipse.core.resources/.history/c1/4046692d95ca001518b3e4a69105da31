@@ -1,0 +1,31 @@
+public class Bike {
+	
+private String Color; 
+private int Price;
+private int Size;
+
+
+public Bike(String color,int size){
+this.Color = color; 
+this.Size = size;
+}
+
+
+public Bike(String color,int size,int price) {
+this.Size = size;
+this.Price = price;
+}
+
+
+public String getColor() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+public String getPrice() {
+	// TODO Auto-generated method stub
+	return null;
+}
+}
+
