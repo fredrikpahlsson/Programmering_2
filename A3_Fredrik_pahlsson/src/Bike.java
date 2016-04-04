@@ -1,47 +1,39 @@
 public class Bike {
+private String color;
+private int price;
+private int size;
 
-	private String color;
-	
-	private int price;
-	
-	private int size;
-	
-	/*konstruktorn*/
-	public Bike (String color, int size){
-		this.color = color;
-		this.size = size;
-			
-		boolean trueColor = false;
-		for(int i=0; i<Constants.STANDARD_COLOR.length; i++){
-			if(Constants.STANDARD_COLOR[i].equals(color)){
-				trueColor = true;
-			}
-			}
-		if(trueColor ==true){
+public Bike(String color, int size){
+	this.color = color;
+	this.size = size;
+}
+public Bike(String color, int size, int price){
+	for (int i = 0; i < Constants.COLORLIST.length; i++) {
+		if (Constants.COLORLIST[i].equals(color)) {
 			this.color = color;
-		}else{
-			this.color="think again cowboy";
+			break;
+		} else {
+			this.color = "Tyvärr är denna färgen ej valbar :'(";
 		}
 	}
-	public Bike (String color, int price, int size){
-		this.color = color;
+	if (size >= Constants.MIN_SIZE && size <= Constants.MAX_SIZE) {
 		this.size = size;
+	}
+	if (price >= Constants.MIN_PRICE && price <= Constants.MAX_PRICE) {
 		this.price = price;
-		
-		
-	}
-	
-	public String getColor(){
-		return this.color;
-	}
-	public int getPrice(){
-		return this.price;
-	}
-	public int getSize(){
-		return this.size;
-	}
-	public void setPrice(){
-		
 	}
 }
 
+public String getColor(){
+    return this.color;
+  }
+public int getSize(){
+	return this.size;
+  }
+public int getPrice(){
+	return this.price;
+  }
+public void setPrice(int price){
+	this.price = price;
+	}
+  }
