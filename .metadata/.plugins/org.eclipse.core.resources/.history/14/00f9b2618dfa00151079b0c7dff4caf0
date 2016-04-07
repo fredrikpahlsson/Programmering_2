@@ -1,0 +1,31 @@
+public class Human {
+	
+	private Dog dog = null;
+	private String name;
+
+	
+	/** Ger människan ett namn i form av en string /*  
+	public Human(String name) {
+		this.name = name;
+	}
+	
+	
+	/**  Hämtar och retunerar namnet på människan/* 
+	public String getName() {
+		return this.name;
+	}
+	/**En metod för att köpa hunden och koppla denna till en människa*/
+	public void buyDog(Dog dog) {
+		this.dog = dog;
+	}
+	/**En metod för att hämta namnet på människan och hunden och hämtars i GUI*/
+	public String getInfo() {
+		if (dog != null) {
+			return name + " äger en vovve som heter " + dog.getDogName();
+		} else {
+			return name + " äger inte en vovve";
+		}
+	}
+	
+
+}
