@@ -25,7 +25,7 @@ public class Dog extends Mammal {
 			return false;
 		}
 	}
-	/**Ärver och implementerar metoden getInfo från Animalklassen*/
+	/**Ärver och implementerar den abstrakta metoden getInfo från Animalklassen*/
 	public String getInfo() {
 		String s = "Hunden som heter " + super.getName() + " och tillhör rasen " + latinName + " är dräktig i " + super.getGTime() + " månader och är en ";
 		if (this.isaggressive()) {

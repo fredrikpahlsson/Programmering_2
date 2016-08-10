@@ -10,7 +10,7 @@ public class Cat extends Mammal {
 	}
 	
 	//Metod
-		/**Arver och implementerar metoden: getInfo från Animalclassen*/
+		/**Arver och implementerar den abstrakta metoden: getInfo från Animalclassen*/
 	public String getInfo() {
 		return "Kissen som heter Misse och tillhör rasen " + latinName + " och är dräktig i " + super.getGTime() + " månader har också  " + Levels + " liv";
 	}

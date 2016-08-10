@@ -2,7 +2,7 @@ public class Dog {
 	private String name;
 	
 	//Konstruktor
-	/**Skapar en Dog genom instansvariablen name*/ 
+	/**Skapar en hund(Dog) genom instansvariablen name*/ 
 	public Dog (String name){
 		this.name = name;
 	}

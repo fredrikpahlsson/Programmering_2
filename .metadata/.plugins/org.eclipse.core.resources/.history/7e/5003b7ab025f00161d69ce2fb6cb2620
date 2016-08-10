@@ -18,7 +18,7 @@ public class Snake extends Animal {
 			return false;
 		}
 	}
-	/**Ärver och implementerar metoden getInfo från Animalklassen*/
+	/**Ärver och implementerar den abstrakta metoden getInfo från Animalklassen*/
 	public String getInfo() {
 		String s = "Ormen som heter Emil tillhör kategorin  '" + latinName + " ormar och är ";
 		if (this.isPoisonus()) {

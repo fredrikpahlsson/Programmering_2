@@ -3,13 +3,13 @@ public class Human {
 	private Dog dog = null;
 	private String name;
 
-	//Konstruktor
+	
 	/** Ger människan ett namn i form av en string */
 	public Human(String name) {
 		this.name = name;
 	}
 	
-	//Metod
+	
 	/**  Hämtar och retunerar namnet på människan*/ 
 	public String getName() {
 		return this.name;
