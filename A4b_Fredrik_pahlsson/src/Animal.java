@@ -3,7 +3,7 @@ public abstract class Animal {
 	protected String latinName;
     protected String Name;
 
-  //Constructor
+  //konstruktor
   	/**Skapar en Animal med en String-variabel latinName*/
 	public Animal(String latinName) {
 		this.latinName = latinName;

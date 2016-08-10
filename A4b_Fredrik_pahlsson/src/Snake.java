@@ -3,7 +3,7 @@ public class Snake extends Animal {
 	
 	private boolean poisonus;
 
-	//Constructor
+	//Konstruktor
 		/**skapar en Snake genom String-variablen latinName och boolean-variablen poisonus*/
 	public Snake(String latinName, boolean poisonus) {
 		super(latinName);

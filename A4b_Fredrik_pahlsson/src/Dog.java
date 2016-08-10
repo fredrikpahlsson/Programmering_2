@@ -2,7 +2,7 @@
 public class Dog extends Mammal {
 	private boolean aggressive;
 
-	//Constructors
+	//Konstruktor
   /**skapar en Dog med Stringvariablen latinName, int GTime och boolean aggressive*/
 	public Dog(String latinName, int GTime, boolean aggressive) {
 		super(latinName, GTime);
