@@ -2,20 +2,23 @@ public class Cat extends Mammal {
 
 	private int Levels;
 
+	//Constructors
+  /**Skapar en katt(Cat) med String-variablen latinName, int GTime och int Levels*/
 	public Cat(String latinName, int GTime, int Levels) {
 		super(latinName, GTime);
 		this.Levels = Levels;
 	}
 	
-
+	//Metoder
+		/**Arver och implementerar den abstrakta metoden: getInfo från Animalclassen*/
 	public String getInfo() {
 		return "Kissen som heter Misse och tillhör rasen " + latinName + " och är dräktig i " + super.getGTime() + " månader har också  " + Levels + " liv";
 	}
-
+	/**Tar Levels för Cat*/
 	public int getLevels() {
 		return this.Levels;
 	}
-
+	/**Satter Levels for Cat*/
 	public void setLevels(int i) {
 		this.Levels = i;
 	}	
